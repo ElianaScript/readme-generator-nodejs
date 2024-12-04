@@ -1,10 +1,10 @@
-# README generator
+# readme-generator-nodejs
 
     ## Description
-    A readme.md file is created through node.js.
+    A readme.md file is created for a Github repo through node.js
 
     ## Installation
-    N/A
+    N?A
 
     ## Usage
     N/A
@@ -17,7 +17,7 @@
 
     ## Questions
     - Github: [ElianaScript](https://github.com/ElianaScript)
-    - Email: [eliana.liantonio@](mailto:eliana.liantonio@)
+    - Email: [eliana.liantonio@gmail.com](mailto:eliana.liantonio@gmail.com)
 
     ## License
     This project is licensed under the MIT license.
