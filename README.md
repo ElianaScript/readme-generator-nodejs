@@ -1,10 +1,10 @@
-# readme-generator-nodejs
+# Readme.md generator
 
     ## Description
-    A readme.md file is created for a Github repo through node.js
+    A readme.md file is created through node.js
 
     ## Installation
-    N?A
+    N/A
 
     ## Usage
     N/A
