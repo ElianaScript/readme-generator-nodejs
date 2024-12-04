@@ -67,18 +67,17 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeToFile(fileName, data,(err) => {
+    fs.writeFile(fileName, data,(err) => {
         if(err) {
             console.log('Error writing this file', err)
         } else {
             console.log('Successfully created README!')
         }
-    })
+    });
 }
 
 function generateMarkdown(data) {
-    return `
-    # ${data.Title}
+    return `# ${data.Title}
 
     ## Description
     ${data.Description}
@@ -96,27 +95,25 @@ function generateMarkdown(data) {
     ${data.Tests}
 
     ## Questions
-    Github: [${data.Github}] (https://github.com/${data.Github})
-    Email: [${data.Email}] (mailto:${data.Email})
-    #${data.Questions}
+    - Github: [${data.Github}](https://github.com/${data.Github})
+    - Email: [${data.Email}](mailto:${data.Email})
 
     ## License
     This project is licensed under the ${data.License} license.
     `;
 
-};
+}
 
 // TODO: Create a function to initialize app
 function init() {
 inquirer.prompt(questions) 
-.then ((answers)=> {
-const fileName = ("README.md");
-const data = generateMarkdown(answers);
-writeToFile(fileName, data);
-console.log('You did it!')
+    .then ((answers) => {
+    const fileName = ("README.md");
+    const data = generateMarkdown(answers);
+    writeToFile(fileName, data);
 })
 .catch ((err) => {
-    console.log('Try again!')
+    console.log('Error occured',err);
 });
 }
 
